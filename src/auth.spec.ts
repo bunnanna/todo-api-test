@@ -20,7 +20,7 @@ test.describe.serial("user", () => {
 	});
 
 	test("login and store cookies", async ({ request, baseURL }) => {
-		const res = await request.post("/user/login", {
+		const res = await request.post("/auth/login", {
 			data: {
 				username,
 				password,
