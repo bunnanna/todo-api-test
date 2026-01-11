@@ -2,6 +2,7 @@ import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
 	testDir: "./src",
+	globalSetup: ["./src/setup/auth.setup.ts"],
 
 	use: {
 		baseURL: "http://localhost:8080",
