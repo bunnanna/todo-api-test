@@ -2,7 +2,7 @@ import { expect, request, type FullConfig } from "@playwright/test";
 
 export default async (config: FullConfig) => {
 	const { use } = config.projects[0];
-	const ctx = await request.newContext(use);
+	const ctx = await request.newContext({ ...use, timeout: 5000 });
 	const username = `test${Date.now()}`;
 	const password = "testtesttest";
 

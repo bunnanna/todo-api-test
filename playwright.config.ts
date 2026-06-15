@@ -3,6 +3,7 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
 	testDir: "./src",
 	globalSetup: ["./src/setup/auth.setup.ts"],
+	globalTimeout: 30000,
 
 	use: {
 		baseURL: "http://localhost:8080",
